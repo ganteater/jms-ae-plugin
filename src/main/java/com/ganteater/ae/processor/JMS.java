@@ -27,7 +27,7 @@ import com.ganteater.ae.util.xml.easyparser.Node;
 import com.ibm.mq.jms.MQQueue;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 
-public class JMS extends TaskProcessor {
+public class JMS extends BaseProcessor {
 
 	private static final int ITERATION_TIMEOUT = 100;
 
@@ -35,7 +35,7 @@ public class JMS extends TaskProcessor {
 		public void operation(QueueSession session, Queue queue) throws JMSException;
 	}
 
-	public JMS(TaskProcessor parent) {
+	public JMS(Processor parent) {
 		super(parent);
 	}
 

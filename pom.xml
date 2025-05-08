@@ -35,20 +35,4 @@
 			<version>9.4.2.0</version>
 		</dependency>
 	</dependencies>
-
-	<reporting>
-		<outputDirectory>../../target/site/ae-plugins/${project.artifactId}</outputDirectory>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<show>public</show>
-					<additionalparam>-Xdoclint:none</additionalparam>
-					<additionalOptions>-Xdoclint:none</additionalOptions>
-					<additionalJOption>-Xdoclint:none</additionalJOption>
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
 </project>
