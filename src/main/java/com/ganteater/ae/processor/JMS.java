@@ -35,10 +35,6 @@ public class JMS extends BaseProcessor {
 		public void operation(QueueSession session, Queue queue) throws JMSException;
 	}
 
-	public JMS(Processor parent) {
-		super(parent);
-	}
-
 	@CommandExamples({ "<SendMessage name='type:property' queue='type:string' attr-map='type:property'/>",
 			"<SendMessage name='type:property' queue='type:string' host='type:string' manager='type:string' channel='type:string'"
 					+ " port='type:integer' user='type:string' password='type:string' targetClient='type:integer' cipherSuite='type:string'/>" })
