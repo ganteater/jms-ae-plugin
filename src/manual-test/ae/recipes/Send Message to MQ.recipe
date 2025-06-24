@@ -1,0 +1,7 @@
+<Recipe name="Send Message to MQ">
+  <Extern class="JMS">
+    <Var name="message">AE Hello MQ!</Var> 
+    <Out name="message" /> 
+    <SendMessage name="message" transportType="1" queue="DEV.QUEUE.1" attr-map="jms.configuration" /> 
+  </Extern> 
+</Recipe> 

@@ -1,0 +1,6 @@
+<Recipe name="Receive Message from MQ">
+  <Extern class="JMS">
+    <ReceiveMessage name="message" queue="DEV.QUEUE.1" attr-map="jms.configuration" timeout="400" /> 
+    <Out name="message" /> 
+  </Extern> 
+</Recipe> 

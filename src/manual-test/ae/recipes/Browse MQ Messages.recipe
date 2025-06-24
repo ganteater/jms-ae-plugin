@@ -1,0 +1,8 @@
+<Recipe name="Browse MQ Messages">
+  <Extern class="JMS">
+    <BrowseMessages name="messages" queue="DEV.QUEUE.1" attr-map="jms.configuration" type="text" /> 
+    <Loop name="message" source="messages">
+      <Out name="message" /> 
+    </Loop> 
+  </Extern> 
+</Recipe> 

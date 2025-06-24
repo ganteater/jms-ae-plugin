@@ -1,0 +1,6 @@
+<Recipe name="MQSize">
+  <Extern class="JMS">
+    <MQSize name="mq_size" queue="DEV.QUEUE.1" attr-map="jms.configuration" timeout="400" /> 
+    <Out name="mq_size" /> 
+  </Extern> 
+</Recipe> 
