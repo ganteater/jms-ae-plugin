@@ -29,12 +29,17 @@
 		</dependency>
 	</dependencies>
 	
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+	<profiles>
+		<profile>
+			<id>pack</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
