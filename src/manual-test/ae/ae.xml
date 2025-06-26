@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://ganteater.com/xml/configuration https://ganteater.com/xml/configuration/anteater-1.2.1.6.xsd">
 
 	<Configuration name="Base Commands">
-		<Var name="log_file" value="ae-desktop" />
+		<Var name="log_file" value="jms-ae" />
 		<Logger rootLogger="DEBUG,LOGFILE,CONSOLE"
 			Threshold="$var{system::log_level,DEBUG}"
 			ConversionPattern="%d{dd.MM.yyyy HH:mm:ss} %-6p %m %n"
@@ -13,7 +13,7 @@
 	</Configuration>
 	
 	<Configuration name="JMS Commands">
-		<Var name="log_file" value="logfile" />
+		<Var name="log_file" value="jms-ae" />
 		<Logger rootLogger="DEBUG,LOGFILE,CONSOLE" Threshold="$var{system::log_level,DEBUG}"
 			ConversionPattern="%d{dd.MM.yyyy HH:mm:ss} %-6p %m %n"
 			File="$var{HOME_WORKINGDIR}/logs/$var{log_file}_$var{START_TIME}.log" />

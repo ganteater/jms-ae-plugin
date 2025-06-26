@@ -1,0 +1,21 @@
+services:
+  ibmmq:
+    container_name: ibmmq
+    image: ibmcom/mq:latest
+    #user: root
+    ports:
+      - "1414:1414"
+      - "9443:9443"
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=MQ1
+      - MQ_ADMIN_PASSWORD=passw0rd
+      - MQ_APP_PASSWORD=passw0rd #username: admin
+    volumes:
+      - ./volumes/qm1data:/mnt/mqm
+
+
+
+
+
+
