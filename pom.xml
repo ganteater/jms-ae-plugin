@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.ganteater.plugins</groupId>
 		<artifactId>ae-plugins</artifactId>
-		<version>1.2.1</version>
+		<version>1.2.2-SNAPSHOT</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -15,6 +15,7 @@
 	<name>JMS Anteater Plugin</name>
 	<description>A plugin providing commands for seamless integration with JMS (Java Message Service), enabling message handling,
 		processing, and automation within Anteater workflows.</description>
+	<url>https://github.com/ganteater/jms-ae-plugin</url>
 
 	<dependencies>
 		<dependency>
@@ -42,5 +43,14 @@
 			</build>
 		</profile>
 	</profiles>
+	
+	<scm>
+		<connection>scm:git:https://github.com/ganteater/jms-ae-plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/ganteater/jms-ae-plugin.git</developerConnection>
+		<url>https://github.com/ganteater/jms-ae-plugin</url>
+	</scm>
 
+	<issueManagement>
+		<url>https://github.com/ganteater/jms-ae-plugin/issues</url>
+	</issueManagement>
 </project>
