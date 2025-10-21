@@ -9,7 +9,7 @@
 			ConversionPattern="%d{dd.MM.yyyy HH:mm:ss} %-6p %m %n"
 			File="$var{HOME_WORKINGDIR}/logs/$var{log_file}_$var{START_TIME}.log" />
 
-		<Recipes path="https://sourceforge.net/code-snapshots/svn/a/an/anteater/code/anteater-code-r709-trunk-anteater-cli-src-manual-test-ae-recipes-commands.zip" />
+		<Recipes path="https://sourceforge.net/projects/anteater/files/recipes/commands.zip/download" />
 	</Configuration>
 	
 	<Configuration name="JMS Commands">
