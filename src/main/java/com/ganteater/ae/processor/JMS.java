@@ -62,13 +62,14 @@ public class JMS extends BaseProcessor {
 	}
 
 	@CommandExamples({ "<ReceiveMessage name='type:property' queue='type:string'  attr-map='type:property' />",
-			"<ReceiveMessage name='type:property' queue='type:string' attr-map='type:property' timeout='0'/>",
+			"<ReceiveMessage name='type:property' queue='type:string' attr-map='type:property' timeout='type:ms'/>",
 			"<ReceiveMessage name='type:property' queue='type:string' host='type:string' manager='type:string' channel='type:string'"
-					+ "port='type:integer' user='type:string' password='type:string' targetClient='type:integer' timeout='0' type='enum:text|object|map|bytes' " +
+					+ "port='type:integer' user='type:string' password='type:string' targetClient='type:integer' timeout='type:ms' type='enum:text|object|map|bytes' "
+					+
 					"transportType='type:integer' cipherSuite='type:string'/>" })
 	public void runCommandReceiveMessage(final Node action) throws NumberFormatException, JMSException {
 		String name = attr(action, "name");
-		long timeout = Long.parseLong(attr(action, "timeout", "0"));
+		int timeout = (int) parseTime(action, "timeout", "0");
 
 		executeJMSAction(action, (s, q) -> {
 			try (QueueReceiver receive = s.createReceiver(q)) {
@@ -202,7 +203,7 @@ public class JMS extends BaseProcessor {
 		if (ssl != null) {
 			factory.setSSLCipherSuite(ssl);
 		}
-		
+
 		String transportType = attr(action, "transportType", "1");
 		factory.setTransportType(Integer.parseInt(transportType));
 
